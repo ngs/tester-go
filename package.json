@@ -58,6 +58,13 @@
       "type": "boolean",
       "default": false,
       "order": 1
+    },
+    "runCoverageWithShortFlag": {
+      "title": "Run Coverage With Short Flag Set",
+      "description": "Runs `go test` with `-short` flag set",
+      "type": "boolean",
+      "default": true,
+      "order": 2
     }
   },
   "standard": {
