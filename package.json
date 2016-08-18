@@ -9,7 +9,7 @@
     "coverage"
   ],
   "main": "./lib/main",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "repository": "https://github.com/joefitzgerald/tester-go",
   "license": "Apache-2.0",
   "engines": {
