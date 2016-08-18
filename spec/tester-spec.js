@@ -79,7 +79,7 @@ describe('tester', () => {
       waitsForPromise(() => { return p })
 
       runs(() => {
-        let markers = buffer.findMarkers({class: 'gocover'})
+        let markers = buffer.findMarkers({})
         expect(markers).toBeDefined()
         expect(markers.length).toBe(2)
         expect(markers[0]).toBeDefined()
