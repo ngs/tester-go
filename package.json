@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "atom-package-deps": "4.2.0",
+    "etch": "^0.6.3",
     "lodash": "^4.16.2",
     "temp": "^0.8.3",
     "rimraf": "^2.5.4"
@@ -38,7 +39,7 @@
   "consumedServices": {
     "go-config": {
       "versions": {
-        "1.0.0": "consumeGoconfig"
+        "^1.0.0": "consumeGoconfig"
       }
     },
     "go-get": {
@@ -52,7 +53,7 @@
       "title": "Run Coverage Tool On Save",
       "description": "Run `go test -coverprofile` each time a file is saved",
       "type": "boolean",
-      "default": false,
+      "default": true,
       "order": 1
     },
     "runCoverageWithShortFlag": {
@@ -61,6 +62,32 @@
       "type": "boolean",
       "default": true,
       "order": 2
+    },
+    "coverageHighlightMode": {
+      "title": "Coverage Highlight Mode",
+      "description": "Control the way that coverage highlighting occurs",
+      "type": "string",
+      "default": "uncovered",
+      "enum": [
+        "covered-and-uncovered",
+        "covered",
+        "uncovered",
+        "disabled"
+      ],
+      "order": 3
+    },
+    "displayTestOutputPanel": {
+      "title": "Display Test Output Panel",
+      "description": "When the test output panel is not being displayed, it will toggle on using this setting",
+      "type": "string",
+      "default": "always",
+      "enum": [
+        "always",
+        "success-only",
+        "failure-only",
+        "never"
+      ],
+      "order": 4
     }
   },
   "standard": {
