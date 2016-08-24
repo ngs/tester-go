@@ -15,6 +15,7 @@ describe('tester', () => {
       if (process.env.GOPATH) {
         oldGopath = process.env.GOPATH
       }
+      atom.config.set('tester-go.coverageHighlightMode', 'covered-and-uncovered')
       gopath = temp.mkdirSync()
       process.env.GOPATH = gopath
       atom.project.setPaths(gopath)
