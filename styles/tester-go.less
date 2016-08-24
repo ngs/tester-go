@@ -1,26 +1,28 @@
 @import "ui-variables";
 
-.test-status-bar {
+// Status Bar --------------------
+
+.tester-go-status-bar {
   color: @text-color-success;
   &:hover {
     color: lighten(@text-color-success, 15%);
   }
-}
 
-.test-status-unknown {
-  color: @text-color-info;
-}
+  &.test-status-unknown {
+    color: @text-color-info;
+  }
 
-.test-status-pending {
-  color: @text-color-warning;
-}
+  &.test-status-pending {
+    color: @text-color-warning;
+  }
 
-.test-status-success {
-  color: @text-color-success;
-}
+  &.test-status-success {
+    color: @text-color-success;
+  }
 
-.test-status-fail {
-  color: @text-color-error;
+  &.test-status-fail {
+    color: @text-color-error;
+  }
 }
 
 
