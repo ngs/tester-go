@@ -21,6 +21,7 @@
     "url": "https://github.com/joefitzgerald/tester-go/issues"
   },
   "dependencies": {
+    "ansi-to-html": "^0.4.1",
     "atom-package-deps": "4.2.0",
     "etch": "^0.6.3",
     "lodash": "^4.16.2",
@@ -88,6 +89,13 @@
         "never"
       ],
       "order": 4
+    },
+    "maxPanelHeight": {
+      "title": "Maximum Panel Height",
+      "description": "Prevent the panel from occupying the entire window",
+      "type": "string",
+      "default": "15vh",
+      "order": 5
     }
   },
   "standard": {
