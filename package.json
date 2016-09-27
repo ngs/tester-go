@@ -43,7 +43,7 @@
     },
     "go-get": {
       "versions": {
-        "1.0.0": "consumeGoget"
+        "2.0.0": "consumeGoget"
       }
     }
   },
