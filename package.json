@@ -23,13 +23,13 @@
   "dependencies": {
     "ansi-to-html": "^0.4.1",
     "atom-package-deps": "4.2.0",
-    "etch": "^0.6.3",
+    "etch": "0.6.3",
     "lodash": "^4.16.2",
     "temp": "^0.8.3",
     "rimraf": "^2.5.4"
   },
   "devDependencies": {
-    "standard": "^8.2.0",
+    "standard": "^8.3.0",
     "fs-plus": "^2.9.2"
   },
   "package-deps": [
@@ -45,7 +45,14 @@
     },
     "go-get": {
       "versions": {
-        "2.0.0": "consumeGoget"
+        "^2.0.0": "consumeGoget"
+      }
+    }
+  },
+  "providedServices": {
+    "go-plus.view": {
+      "versions": {
+        "0.1.0": "provideGoPlusView"
       }
     }
   },
@@ -76,26 +83,6 @@
         "disabled"
       ],
       "order": 3
-    },
-    "displayTestOutputPanel": {
-      "title": "Display Test Output Panel",
-      "description": "When the test output panel is not being displayed, it will toggle on using this setting",
-      "type": "string",
-      "default": "always",
-      "enum": [
-        "always",
-        "success-only",
-        "failure-only",
-        "never"
-      ],
-      "order": 4
-    },
-    "maxPanelHeight": {
-      "title": "Maximum Panel Height",
-      "description": "Prevent the panel from occupying the entire window",
-      "type": "string",
-      "default": "15vh",
-      "order": 5
     }
   },
   "standard": {

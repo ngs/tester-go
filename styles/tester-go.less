@@ -1,61 +1,6 @@
 @import "ui-variables";
 
-// Status Bar --------------------
-
-.tester-go-status-bar {
-  color: @text-color-success;
-  &:hover {
-    color: lighten(@text-color-success, 15%);
-  }
-
-  &.test-status-unknown {
-    color: @text-color-info;
-  }
-
-  &.test-status-pending {
-    color: @text-color-warning;
-  }
-
-  &.test-status-success {
-    color: @text-color-success;
-  }
-
-  &.test-status-fail {
-    color: @text-color-error;
-  }
-}
-
-
-// Panel --------------------
 
 .tester-go-panel {
-
-  .panel-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .panel-button {
-    color: inherit;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: default;
-
-    &:hover {
-      color: @text-color-highlight;
-    }
-    &:active {
-      color: @text-color-subtle;
-    }
-
-    &:before {
-      margin-right: 0;
-    }
-  }
-
-  .panel-body {
-    overflow: auto;
-  }
+  overflow: auto;
 }
