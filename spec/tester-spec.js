@@ -75,7 +75,7 @@ describe('tester', () => {
       let testBuffer = testEditor.getBuffer()
       testBuffer.setText('package main\n\nimport "testing"\n\nfunc TestHello(t *testing.T) {\n\tresult := Hello()\n\tif result != "Hello, 世界" {\n\t\tt.Errorf("Expected %s - got %s", "Hello, 世界", result)\n\t}\n}')
       testBuffer.save()
-      let p = mainModule.getTester().runCoverage(editor)
+      let p = mainModule.getTester().runTests(editor)
 
       waitsForPromise(() => { return p })
 
@@ -108,7 +108,7 @@ describe('tester', () => {
         expect(range.end.column).toBe(1)
       })
 
-      p = mainModule.getTester().runCoverage(editor)
+      p = mainModule.getTester().runTests(editor)
 
       waitsForPromise(() => { return p })
 
@@ -157,7 +157,7 @@ describe('tester', () => {
       let testBuffer = testEditor.getBuffer()
       testBuffer.setText('package main\n\nimport "testing"\n\nfunc TestHello(t *testing.T) {\n\tresult := Hello()\n\tif result != "Hello, 世界" {\n\t\tt.Errorf("Expected %s - got %s", "Hello, 世界", result)\n\t}\n}')
       testBuffer.save()
-      let p = mainModule.getTester().runCoverage(editor)
+      let p = mainModule.getTester().runTests(editor)
 
       waitsForPromise(() => { return p })
 

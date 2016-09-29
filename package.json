@@ -1,6 +1,6 @@
 {
   "name": "tester-go",
-  "description": "A tester package for the Go language that uses `go test` to display test coverage.",
+  "description": "A tester package for the Go language that uses `go test` to run tests, display test output and display test coverage.",
   "keywords": [
     "go",
     "golang",
