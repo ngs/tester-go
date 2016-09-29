@@ -1,6 +1,6 @@
 {
   "name": "tester-go",
-  "description": "A tester package for the Go language that uses `go test` to display test coverage.",
+  "description": "A tester package for the Go language that uses `go test` to run tests, display test output and display test coverage.",
   "keywords": [
     "go",
     "golang",
@@ -21,13 +21,15 @@
     "url": "https://github.com/joefitzgerald/tester-go/issues"
   },
   "dependencies": {
+    "ansi-to-html": "^0.4.1",
     "atom-package-deps": "4.2.0",
+    "etch": "0.6.3",
     "lodash": "^4.16.2",
     "temp": "^0.8.3",
     "rimraf": "^2.5.4"
   },
   "devDependencies": {
-    "standard": "^8.2.0",
+    "standard": "^8.3.0",
     "fs-plus": "^2.9.2"
   },
   "package-deps": [
@@ -38,29 +40,49 @@
   "consumedServices": {
     "go-config": {
       "versions": {
-        "1.0.0": "consumeGoconfig"
+        "^1.0.0": "consumeGoconfig"
       }
     },
     "go-get": {
       "versions": {
-        "2.0.0": "consumeGoget"
+        "^2.0.0": "consumeGoget"
+      }
+    }
+  },
+  "providedServices": {
+    "go-plus.view": {
+      "versions": {
+        "0.1.0": "provideGoPlusView"
       }
     }
   },
   "configSchema": {
-    "runCoverageOnSave": {
-      "title": "Run Coverage Tool On Save",
+    "runTestsOnSave": {
+      "title": "Run Tests On Save",
       "description": "Run `go test -coverprofile` each time a file is saved",
       "type": "boolean",
-      "default": false,
+      "default": true,
       "order": 1
     },
-    "runCoverageWithShortFlag": {
-      "title": "Run Coverage With Short Flag Set",
+    "runTestsWithShortFlag": {
+      "title": "Run Tests With Short Flag Set",
       "description": "Runs `go test` with `-short` flag set",
       "type": "boolean",
       "default": true,
       "order": 2
+    },
+    "coverageHighlightMode": {
+      "title": "Coverage Highlight Mode",
+      "description": "Control the way that coverage highlighting occurs",
+      "type": "string",
+      "default": "uncovered",
+      "enum": [
+        "covered-and-uncovered",
+        "covered",
+        "uncovered",
+        "disabled"
+      ],
+      "order": 3
     }
   },
   "standard": {
