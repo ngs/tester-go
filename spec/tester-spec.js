@@ -50,7 +50,7 @@ describe('tester', () => {
     let testEditor
 
     beforeEach(() => {
-      atom.config.set('tester-go.runCoverageOnSave', false)
+      atom.config.set('tester-go.runTestsOnSave', false)
       filePath = path.join(gopath, 'src', 'github.com', 'testuser', 'example', 'go-plus.go')
       testFilePath = path.join(gopath, 'src', 'github.com', 'testuser', 'example', 'go-plus_test.go')
       fs.writeFileSync(filePath, '')

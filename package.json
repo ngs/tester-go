@@ -57,15 +57,15 @@
     }
   },
   "configSchema": {
-    "runCoverageOnSave": {
-      "title": "Run Coverage Tool On Save",
+    "runTestsOnSave": {
+      "title": "Run Tests On Save",
       "description": "Run `go test -coverprofile` each time a file is saved",
       "type": "boolean",
       "default": true,
       "order": 1
     },
-    "runCoverageWithShortFlag": {
-      "title": "Run Coverage With Short Flag Set",
+    "runTestsWithShortFlag": {
+      "title": "Run Tests With Short Flag Set",
       "description": "Runs `go test` with `-short` flag set",
       "type": "boolean",
       "default": true,
