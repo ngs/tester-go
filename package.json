@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "standard": "^8.3.0",
-    "fs-plus": "^2.9.2"
+    "fs-plus": "^2.9.3"
   },
   "package-deps": [
     "go-config",
